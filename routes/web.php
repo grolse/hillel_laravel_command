@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/content', 'ContentController@getContent');
+$router->post('/content', 'ContentController@createContent');
